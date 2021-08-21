@@ -34,9 +34,16 @@ quotewindow  = (function (w) {
         rel: 'stylesheet',
         id: 'bootswatch'
     }).appendTo('head');
-    var $select = $('<select class="form-control col-sm-9" id="quotestrap">', {
+    var $select = $('<select class="form-control col-sm-9" data-live-search="true" id="quotestrap">', {
         html: '<option value="null">Bootswatch</option>'
     });
+    try {
+        $select.selectpicker();
+        $select.selectpicker('setStyle', 'btn-info').selectpicker('setStyle', 'btn-sm');
+    } catch(e) {
+        console.log("Error while trying to promote to SelectPicker.");
+        console.error(e);
+    }
     // $(`<small class="help-block">Theme selector by Quotestrap (Free).</small>`).appendTo(getMeta("[name='quotestrap:selector']"));
     $select.on('change', function (e) {
         var value = $select.val();
@@ -78,10 +85,9 @@ quotewindow  = (function (w) {
           $op.change()
         }
         try {
-            $select.selectpicker();
-            $select.selectpicker('setStyle', 'btn-info').selectpicker('setStyle', 'btn-sm');
+            $select.selectpicker('render');
         } catch(e) {
-            console.log("Error while trying to convert to SelectPicker.");
+            console.log("Error while trying to promote to SelectPicker.");
             console.error(e);
         }
     });
