@@ -38,7 +38,7 @@ quotewindow  = (function (w) {
         html: '<option value="null">Bootswatch</option>'
     });
     w.$select = $select
-    // $(`<small class="help-block">Theme selector by Quotestrap (Free).</small>`).appendTo(getMeta("[name='quotestrap:selector']"));
+    $(`<small class="help-block">Theme selector by Quotestrap (Free).</small>`).appendTo(getMeta("[name='quotestrap:selector']"));
     $select.on('change', function (e) {
         var value = $select.val();
         value && $link.attr('href', value);
