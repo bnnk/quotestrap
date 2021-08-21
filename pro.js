@@ -38,13 +38,6 @@ quotewindow  = (function (w) {
         html: '<option value="null">Bootswatch</option>'
     });
     w.$select = $select
-    try {
-        $select.selectpicker();
-        $select.selectpicker('setStyle', 'btn-info').selectpicker('setStyle', 'btn-sm');
-    } catch(e) {
-        console.log("Error while trying to promote to SelectPicker.");
-        console.error(e);
-    }
     // $(`<small class="help-block">Theme selector by Quotestrap (Free).</small>`).appendTo(getMeta("[name='quotestrap:selector']"));
     $select.on('change', function (e) {
         var value = $select.val();
@@ -84,12 +77,6 @@ quotewindow  = (function (w) {
           $op.attr("selected", "")
           console.log($op)
           $op.change()
-        }
-        try {
-            $select.selectpicker('render');
-        } catch(e) {
-            console.log("Error while trying to promote to SelectPicker.");
-            console.error(e);
         }
     });
     $(getMeta("[name='quotestrap:selector']")).append($select)
