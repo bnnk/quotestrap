@@ -37,13 +37,6 @@ quotewindow  = (function (w) {
     var $select = $('<select class="form-control col-sm-9" id="quotestrap">', {
         html: '<option value="null">Bootswatch</option>'
     });
-    try {
-        $('.selectpicker').selectpicker();
-        $('.selectpicker').selectpicker('setStyle', 'btn-info').selectpicker('setStyle', 'btn-sm');
-    } catch(e) {
-        console.log("Error while trying to convert to SelectPicker.");
-        console.error(e);
-    }
     // $(`<small class="help-block">Theme selector by Quotestrap (Free).</small>`).appendTo(getMeta("[name='quotestrap:selector']"));
     $select.on('change', function (e) {
         var value = $select.val();
@@ -83,6 +76,13 @@ quotewindow  = (function (w) {
           $op.attr("selected", "")
           console.log($op)
           $op.change()
+        }
+        try {
+            $select.selectpicker();
+            $select.selectpicker('setStyle', 'btn-info').selectpicker('setStyle', 'btn-sm');
+        } catch(e) {
+            console.log("Error while trying to convert to SelectPicker.");
+            console.error(e);
         }
     });
     $(getMeta("[name='quotestrap:selector']")).append($select)
