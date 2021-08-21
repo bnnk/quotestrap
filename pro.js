@@ -37,6 +37,7 @@ quotewindow  = (function (w) {
     var $select = $('<select class="form-control col-sm-9" data-live-search="true" id="quotestrap">', {
         html: '<option value="null">Bootswatch</option>'
     });
+    w.$select = $select
     try {
         $select.selectpicker();
         $select.selectpicker('setStyle', 'btn-info').selectpicker('setStyle', 'btn-sm');
