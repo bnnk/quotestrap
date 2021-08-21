@@ -1,0 +1,21 @@
+{
+  "name": "quotestrap-pro",
+  "version": "1.4.0",
+  "description": "A JQuery-based Theme Selector for bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BK Shrinandhan",
+  "keywords": [
+    "theme",
+    "boostrap",
+    "jquery"
+  ],
+  "publishConfig": {
+    "registry": "https://r.privjs.com"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
