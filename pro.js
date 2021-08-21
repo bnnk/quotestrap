@@ -1,8 +1,8 @@
 function getMeta(childSelector){
-    return $("meta" + childSelector)[0].attributes.content.textContent
+    return $("meta" + childSelector).attr("content")
 }
 function getQMeta(){
-    return quotewindow.data[$("quotestrap")[0].getAttribute("name")]
+    return quotewindow.data[$("quotestrap").attr("name")]
 }
 function isNotAnEmptySelection(jquery_Selection){
   return jquery_Selection.length != 0
