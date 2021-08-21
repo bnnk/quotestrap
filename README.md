@@ -1,5 +1,6 @@
 # QuoteStrap - JQuery-based Theme selector
 
+# Major Announcement- Quotestrap is now free!
 Ever Thought that your web doesn't hash a theme selector? Fear not, You can use This!
 
 ## Features: Why should I buy it?
