@@ -34,7 +34,7 @@ quotewindow  = (function (w) {
         rel: 'stylesheet',
         id: 'bootswatch'
     }).appendTo('head');
-    var $select = $('<select class="form-control col-sm-9" data-live-search="true" id="quotestrap">', {
+    var $select = $('<select class="form-control col-sm-9 fstdropdown-select">', {
         html: '<option value="null">Bootswatch</option>'
     });
     w.$select = $select

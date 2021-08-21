@@ -14,11 +14,7 @@ function loadjscssfile(filename, filetype){
         document.getElementsByTagName("head")[0].appendChild(fileref)
 }
 $(document).on('page:load', function(){
-    loadjscssfile("https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css", "css")
-    loadjscssfile("//cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js", "js")
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-        $('.selectpicker').selectpicker('mobile');
-    }      
-    quotewindow.$select.selectpicker()
-    quotewindow.$select.selectpicker('setStyle', 'btn-info')
+    loadjscssfile("//gitcdn.link/repo/VirtusX/fstdropdown/master/fstdropdown.min.js", "js")
+    loadjscssfile("//gitcdn.link/repo/VirtusX/fstdropdown/master/fstdropdown.min.css", "css")
+    setFstDropdown()
 });
