@@ -13,8 +13,7 @@ function loadjscssfile(filename, filetype){
     if (typeof fileref!="undefined")
         document.getElementsByTagName("head")[0].appendChild(fileref)
 }
-$(document).on('page:load', function(){
+(function(){
     loadjscssfile("//gitcdn.link/repo/VirtusX/fstdropdown/master/fstdropdown.min.js", "js")
     loadjscssfile("//gitcdn.link/repo/VirtusX/fstdropdown/master/fstdropdown.min.css", "css")
-    setFstDropdown()
-});
+})();
